@@ -1,18 +1,20 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_array - prints n element of an array of integers
+ * Owned by Bwave
+ * @a: int to check
+ * @n: int to check
+ * Return: 0 is success
  */
-int main(void)
+void print_array(int *a, int n)
 {
-    char s1[98];
-    char *ptr;
+	int x;
 
-    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
-    printf("%s", s1);
-    printf("%s", ptr);
-    return (0);
+	for (x = 0; x < n; x++)
+		if (x != n - 1)
+		printf("%d, ", a[x]);
+		else
+			printf("%d", a[x]);
+printf("\n");
 }
