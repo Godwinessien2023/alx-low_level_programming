@@ -5,8 +5,11 @@
  *Return: always 0
 */
 
+#include <stdio.h>
+
 int main(void)
 {
-	printf("%s\n", __FILE__);
-	return (0);
+    printf("Name of source file: %s\n", __FILE__);
+
+    return 0;
 }
