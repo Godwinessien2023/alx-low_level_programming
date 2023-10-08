@@ -29,7 +29,8 @@ void check_elf(unsigned char *e_ident)
 
 	for (index = 0; index < 4; index++)
 	{
-		if (e_ident[index] != 'E' &&
+		if (e_ident[index] != 127 &&
+		    e_ident[index] != 'E' &&
 		    e_ident[index] != 'L' &&
 		    e_ident[index] != 'F')
 		{
@@ -57,7 +58,7 @@ void print_magic(unsigned char *e_ident)
 		if (index == EI_NIDENT - 1)
 			printf("\n");
 		else
-			printf(" ");
+			printf("      ");
 	}
 }
 
@@ -133,6 +134,7 @@ void print_version(unsigned char *e_ident)
  * print_osabi - Prints the OS/ABI of an ELF header.
  * @e_ident: A pointer to an array containing the ELF version.
  */
+
 void print_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
@@ -167,7 +169,7 @@ void print_osabi(unsigned char *e_ident)
 		printf("ARM\n");
 		break;
 	case ELFOSABI_STANDALONE:
-		printf("Standalone App\n");
+		printf("Standalone App");
 		break;
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
