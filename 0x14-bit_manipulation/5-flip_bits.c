@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	i= 0;
 	result = 1;
 	differnce = n ^ m;
-	for (j = 0; j < (sizeof(unsigned long int) * 6); j++)
+	for (j = 0; j < (sizeof(unsigned long int) * 8); j++)
 	{
 		if (result == (differnce & result))
 			i++;
