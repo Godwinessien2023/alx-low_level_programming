@@ -1,4 +1,4 @@
-#include "htable.h"
+#include "hash_tables.h"
 
 /**
  * hash_djb2 - To create hash func using djb2 algorithm.
