@@ -18,4 +18,4 @@ int main(void)
     printf("Found %d at index: %d\n\n", 3, exponential_search(array, size, 3));
     printf("Found %d at index: %d\n", 999, exponential_search(array, size, 999));
     return (EXIT_SUCCESS);
-}:wq
+}
